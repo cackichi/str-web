@@ -1,0 +1,111 @@
+body {
+    background-color: #FFEFDF;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.image-row {
+          display: flex;
+          justify-content: space-between;
+          margin-right: 50px;
+        }
+        .image-row img {
+          border-radius: 10px;
+          width: 30%;
+          margin: 0 10px;
+        }
+
+main {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#top-films a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.film {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.image-gallery img {
+    width: 300px;
+    height: 200px;
+    border-radius: 15px;
+    border: 2px solid black;
+}
+
+table {
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    font-weight: bold;
+}
+
+
+#top-films ul {
+    list-style-type: none;
+}
+
+#top-films ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+#Interstellar p {
+    text-align: center;
+}
+
+#The-revenant p {
+    text-align: right;
+}
+
+#twelve-years-of-slave p {
+    text-align: left;
+}
+
+@font-face {
+    font-family: 'InterstellarFont';
+    src: url('fonts/Sacramento.ttf');
+}
+
+#Interstellar {
+    font-family: 'InterstellarFont', serif;
+}
+
+@font-face {
+    font-family: 'TheRevenantFont';
+    src: url('fonts/RazlukaSP-Bold.otf');
+}
+
+#The-revenant {
+    font-family: 'TheRevenantFont', serif;
+}
+
+@font-face {
+    font-family: '12Font';
+    src: url('fonts/SkrampCyr-Regular_0.ttf');
+}
+
+#twelve-years-of-slave {
+    font-family: '12Font', serif;
+}
+
+p b {
+    font-weight: bold;
+}
+
+p strong {
+    font-weight: 700;
+}
