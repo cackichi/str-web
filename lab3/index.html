@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<section class="sign-section">
+    <main class="sign">
+        <form method="post" action="/reg">
+            <h1>Регистрация</h1>
+
+            <div class="form-floating">
+                <input type="text" id="login" name="login" placeholder="Логин" minlength="5" maxlength="20" required>
+            </div>
+            <div class="form-floating">
+                <input placeholder="+375 (XX) XXX-XX-XX" type="tel" id="phone" name="phone" pattern="\+375\s\(\d{2}\)\s\d{3}-\d{2}-\d{2}" required>
+            </div>
+            <div class="form-floating">
+                <input type="email" id="email" name="email" placeholder="Почта" required>
+            </div>
+            <div class="form-floating">
+                <input type="password" id="password" name="password" placeholder="Пароль" minlength="5" maxlength="20" required>
+            </div>
+
+            <fieldset>
+                <legend>Пол</legend>
+                <div class="form-floating">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Мужской</label>
+                </div>
+                <div class="form-floating">
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Женский</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Дополнительные данные</legend>
+                <div class="form-floating">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Подписаться на рассылку</label>
+                </div>
+                <div class="form-floating">
+                    <label for="file">Загрузить фото</label>
+                    <input type="file" id="file" name="file">
+                </div>
+            </fieldset>
+
+            <button class="sign-btn" type="submit" value="Зарегистрироваться">Зарегистрироваться</button>
+            <button class="sign-btn" type="reset" value="Сбросить">Сбросить</button>
+
+        </form>
+    </main>
+</section>
+</body>
+</html>

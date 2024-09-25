@@ -1,0 +1,57 @@
+body {
+    background: #FAF3E0;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+.sign {
+    margin-top: 25px;
+    width: 400px;
+    padding: 40px;
+    background: yellow;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
+.sign h1 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #000000;
+    font-size: 32px;
+    text-align: center;
+}
+
+.sign input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+.sign-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-btn {
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    width: 100%;
+    margin-top: 5px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 0;
+    background: #283655;
+    color: white;
+}
+
+.form-floating {
+    padding: 0 0 10px;
+    display: flex;
+}
