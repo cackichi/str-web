@@ -1,0 +1,102 @@
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  background: rgb(52, 206, 142);
+  height: 100px;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  margin: 0;
+}
+
+button {
+  margin: 50px;
+  font-size: 20px;
+  background-color: red;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  animation: vibrate 0.1s infinite linear;
+  transition: background-color 0.3s ease;
+}
+
+@keyframes vibrate {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(0); }
+  75% { transform: translateX(5px); }
+  100% { transform: translateX(0); }
+}
+
+button:hover {
+  animation-play-state: paused;
+  background-color: green;
+}
+
+a {
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+  position: relative;
+}
+
+a::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: green;
+  bottom: -2px;
+  left: 50%;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: green;
+}
+
+a:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+
+.ball {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: drop 2s ease-in-out forwards;
+}
+
+@keyframes drop {
+  0% {
+    top: 0;
+    transform: scaleY(1);
+  }
+  50% {
+    top: 90%;
+    transform: scaleY(0.7);
+  }
+  70% {
+    top: 50%;
+    transform: scaleY(1);
+  }
+  100% {
+    top: 90%;
+    transform: scaleY(0.8);
+  }
+}
