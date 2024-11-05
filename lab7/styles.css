@@ -1,41 +1,38 @@
-html {
-    font-family: sans-serif;
+@media (min-width: 1400px){
+    .adaptive {
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+      "item1 item1 item2 item2"
+      "item3 item3 item3 item3"
+      "item4 item4 item5 item5"
+      "item6 item7 item8 item9";
+
+    }
 }
 
-body {
-    margin: 0;
+@media (min-width: 700px) and (max-width: 1399px){
+    .adaptive {
+        display: grid;
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+      "item1 item1"
+      "item2 item2"
+      "item3 item3"
+      "item4 item5"
+      "item6 item7"
+      "item8 item9";
+
+    }
 }
 
-header {
-    background: rgb(52, 206, 142);
-    height: 100px;
-}
-
-h1 {
-    text-align: center;
-    color: white;
-    line-height: 100px;
-    margin: 0;
-}
-
-article {
-    padding: 10px;
-    margin: 10px;
-    background: rgba(16, 233, 215, 0.178);
-}
-
-
-
-.grid {
-    display: grid;
-    grid-template-areas:
-    "item1 item2 item3 item3"
-    "item1 item4 item3 item3"
-    "item1 item5 item6 item7"
-    "item8 item9 item9 item10";
-
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+@media (max-width: 699px){
+    .adaptive {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 article:first-child{
@@ -70,10 +67,32 @@ article:nth-child(8){
     grid-area: item8;
 }
 
-article:nth-last-child(2){
+article:last-child{
     grid-area: item9;
 }
 
-article:last-child{
-    grid-area: item10;
+html {
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    background: rgb(52, 206, 142);
+    height: 100px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    line-height: 100px;
+    margin: 0;
+}
+
+article {
+    padding: 10px;
+    margin: 10px;
+    background: rgba(16, 233, 215, 0.178);
 }
