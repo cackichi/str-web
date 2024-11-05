@@ -1,0 +1,79 @@
+html {
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    background: rgb(52, 206, 142);
+    height: 100px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    line-height: 100px;
+    margin: 0;
+}
+
+article {
+    padding: 10px;
+    margin: 10px;
+    background: rgba(16, 233, 215, 0.178);
+}
+
+
+
+.grid {
+    display: grid;
+    grid-template-areas:
+    "item1 item2 item3 item3"
+    "item1 item4 item3 item3"
+    "item1 item5 item6 item7"
+    "item8 item9 item9 item10";
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+article:first-child{
+    grid-area: item1;
+}
+
+article:nth-child(2){
+    grid-area: item2;
+}
+
+article:nth-child(3){
+    grid-area: item3;
+}
+
+article:nth-child(4){
+    grid-area: item4;
+}
+
+article:nth-child(5){
+    grid-area: item5;
+}
+
+article:nth-child(6){
+    grid-area: item6;
+}
+
+article:nth-child(7){
+    grid-area: item7;
+}
+
+article:nth-child(8){
+    grid-area: item8;
+}
+
+article:nth-last-child(2){
+    grid-area: item9;
+}
+
+article:last-child{
+    grid-area: item10;
+}
