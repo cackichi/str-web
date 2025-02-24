@@ -179,7 +179,6 @@
             container.appendChild(card);
         });
 
-        // Добавляем обработчик после создания карточек
         document.querySelectorAll('.see-page-btn').forEach(btn => {
             btn.onclick = function() {
                 const shirtIndex = shirts.indexOf(this.closest('.shirt-card').__shirt__);

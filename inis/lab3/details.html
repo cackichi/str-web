@@ -88,31 +88,25 @@
 <script type="module">
     import { shirts } from './shirts.js';
 
-    // Получаем ID футболки из URL
     const urlParams = new URLSearchParams(window.location.search);
     const shirtId = parseInt(urlParams.get('id'));
 
-    // Находим футболку по ID
     const currentShirt = shirts[shirtId];
 
-    // Функция для создания кнопки цвета
     function createColorButton(colorName, isActive = false) {
         const btn = document.createElement('button');
         btn.className = `color-btn ${isActive ? 'active' : ''}`;
         btn.textContent = colorName;
         btn.onclick = () => {
-            // Обновляем активную кнопку
             document.querySelectorAll('.color-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
 
-            // Обновляем изображение
             const image = document.getElementById('shirt-image');
             image.src = currentShirt.colors[colorName]?.front || currentShirt.default?.front;
         };
         return btn;
     }
 
-    // Функция для заполнения детальной информации
     function populateDetails() {
         const nameElement = document.getElementById('shirt-name');
         const descriptionElement = document.getElementById('shirt-description');
@@ -120,13 +114,11 @@
         const colorButtonsContainer = document.getElementById('color-buttons');
         const imageElement = document.getElementById('shirt-image');
 
-        // Заполняем основную информацию
         nameElement.textContent = currentShirt.name;
         descriptionElement.textContent = currentShirt.description || 'Описание отсутствует';
         priceElement.textContent = currentShirt.price;
         imageElement.src = currentShirt.colors.white?.front || currentShirt.default?.front;
 
-        // Создаем кнопки цветов
         const colors = Object.keys(currentShirt.colors);
         colors.forEach((color, index) => {
             const btn = createColorButton(color, index === 0);
@@ -134,7 +126,6 @@
         });
     }
 
-    // Добавляем обработчик для кнопки "See Page"
     document.addEventListener('DOMContentLoaded', () => {
         populateDetails();
     });
